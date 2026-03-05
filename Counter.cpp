@@ -11,7 +11,6 @@ In your main() function, demonstrate the class by:
 ***/
 
 
-
 #include<iostream>
 using namespace std;
 
@@ -19,25 +18,27 @@ template <typename T>
 class Counter
 {
 	T value;
-	public:
-	
+public:
+
 	Counter(T v);
 	void increment();
-	T getValue();	
-	
+	T getValue();
+
 };
 
 template <typename  T>
-Counter<T>::Counter(int v)
+Counter<T>::Counter(T v)
 {
+	cout << "Before increment:" << v << endl;
+	value = v;
 	//complete the missing code
-	
 }
 
 template <typename  T>
 void Counter<T>::increment()
 {
 	//complete the missing code
+	value++;
 }
 
 
@@ -45,16 +46,23 @@ template <typename T>
 T  Counter<T>::getValue()
 {
 	//complete the missing code
-	
+	cout << "After increment:";
+	return value;
 }
 
 int main()
 {
 	Counter<int> int_counter(4);
-    int_counter.increment();
-	cout<<int_counter.getValue();
-	
+	int_counter.increment();
+	cout << int_counter.getValue() << endl;
+	Counter <float> float_counter(5.0);
+	float_counter.increment();
+	cout << float_counter.getValue() << endl;
 	// complete the rest of the code as given in Q1
-	
-	
+	Counter <double> double_counter(6.87);
+	double_counter.increment();
+	cout << double_counter.getValue() << endl;
+	double_counter.increment();
+	cout << double_counter.getValue() << endl;
+	return 0;
 }
