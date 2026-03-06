@@ -61,6 +61,12 @@ int main()
 	
 	A.print();
 
+	Array <double>A1;
+	A1.set(0,45.89);
+	A1.set(1,42.12);
+	cout << "Value at the index no.0:<< A1.get(0) << endl;
+	cout << "Value at the index no.1 << A1.get(1) << endl;
 
 	return 0;
 }
+
