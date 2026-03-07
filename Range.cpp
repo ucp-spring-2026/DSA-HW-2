@@ -8,5 +8,51 @@ In your main() function, demonstrate the class by:
 •	Creating a Range<double> object and checking whether several decimal values fall inside the range.
 •	Creating a Range<char> object and checking whether certain characters fall within a character range (e.g., 'A' to 'Z').
 **/
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Range
+{
+	T maximum;
+	T minimum;
+public:
+	Range(T max, T min)
+	{
+		maximum = max;
+		minimum = min;
+	}
+	bool check(T val)
+	{
+		if (val >= minimum && val <= maximum)
+		{
+			cout << "Value does lie in the range." << endl;
+			cout << "Value:" << val << endl;
+			return true;
+		}
+		else
+		{
+
+			cout << "Value does not lie in the range." << endl;
+			cout << "Value:" << val << endl;
+			return false;
+		}
+	}
+
+
+};
+
+
+int main()
+{
+	Range <int> r(1922,-1022);
+	r.check(3551);
+	Range <double> r1(25, -25);
+	r.check(12);
+	Range <int> r2(100, 0);
+	r.check(23);
+
+	return 0;
+}
 
 
