@@ -47,10 +47,11 @@ int main()
 	Range <int> r(1922,-1022);
 	r.check(3551);
 	Range <double> r1(25, -25);
-	r.check(12);
+	r1.check(12);
 	Range <int> r2(100, 0);
-	r.check(23);
+	r2.check(23);
 	Range <char> r3('Z', 'A');
-	r.check('N');
+	r3.check('N');
 	return 0;
 }
+
