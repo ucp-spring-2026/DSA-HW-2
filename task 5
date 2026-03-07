@@ -1,0 +1,52 @@
+//header file
+
+#pragma once
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Range
+{
+	T maximum;
+	T minimum;
+public:
+	Range(T max, T min)
+	{
+		maximum = max;
+		minimum = min;
+	}
+	bool check(T val)
+	{
+		if (val >= minimum && val <= maximum)
+		{
+			cout << "Value does lie in the range." << endl;
+			cout << "Value:" << val << endl;
+			return true;
+		}
+		else
+		{
+
+			cout << "Value does not lie in the range." << endl;
+			cout << "Value:" << val << endl;
+			return false;
+		}
+	}
+};
+
+//cpp file
+
+#include "range.h"
+int main()
+{
+	Range <int> r(1922,-1022);
+	r.check(3551);
+	Range <double> r1(25, -25);
+	r1.check(12);
+	Range <int> r2(100, 0);
+	r2.check(23);
+	Range <char> r3('N', 'A');
+	r3.check('N');
+	return 0;
+}
+
+
