@@ -7,8 +7,7 @@ In your main() function, demonstrate the class by:
 •	Creating a Range<int> object and checking whether several integer values fall inside the range.
 •	Creating a Range<double> object and checking whether several decimal values fall inside the range.
 •	Creating a Range<char> object and checking whether certain characters fall within a character range (e.g., 'A' to 'Z').
-**/
-#include <iostream>
+**/#include <iostream>
 using namespace std;
 
 template <class T>
@@ -51,8 +50,7 @@ int main()
 	r.check(12);
 	Range <int> r2(100, 0);
 	r.check(23);
-
+	Range <char> r3('Z', 'A');
+	r.check('N');
 	return 0;
 }
-
-
